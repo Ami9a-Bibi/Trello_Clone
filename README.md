@@ -14,7 +14,7 @@ Requirements:
 Installation Steps:
   Clone the Repository:
     Copy code
-    git clone https://github.com/yourusername/trello-clone.git
+    git clone https://github.com/Ami9a-Bibi/Trello_Clone.git
   Open the Project in Android Studio:
     Launch Android Studio and select "Open an Existing Project."
     Navigate to the folder where the project is cloned and open it.
