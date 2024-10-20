@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/main">
+
+    <!-- HorizontalScrollView to enable left-to-right scrolling -->
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:background="@drawable/img_1">
+        <ScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+        <!-- LinearLayout to contain the two vertically scrollable sections -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <!-- First vertical scrollable section (FAQs) -->
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="16dp"
+                android:padding="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@color/divider_color">
+
+                    <!-- FAQ Section Title -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="👋😎❓ How do I ...? (FAQs)"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:paddingBottom="8dp"
+                        android:background="@color/task_list_action_color"/>
+
+                    <!-- FAQ 1: Add a member to a board (clickable question) -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="8dp">
+
+                        <!-- Question -->
+                        <TextView
+                            android:id="@+id/question_add_member"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:minHeight="48dp"
+                            android:text="Add a member to a board"
+                            android:textSize="16sp"
+                            android:drawableStart="@drawable/ic_user"
+                            android:drawablePadding="8dp"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:background="?attr/selectableItemBackground" />
+
+                        <!-- Hidden Answer (Initially GONE) -->
+                        <TextView
+                            android:id="@+id/answer_add_member"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="To add a member to a board, go to the board's menu, select 'Invite', and type the member's email address."
+                            android:textSize="14sp"
+                            android:padding="8dp"
+                            android:visibility="visible" />
+                    </LinearLayout>
+
+                    <!-- FAQ 2: Add a checklist -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="8dp">
+
+                        <!-- Question -->
+                        <TextView
+                            android:id="@+id/question_add_checklist"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:minHeight="48dp"
+                            android:text="Add a checklist"
+                            android:textSize="16sp"
+                            android:drawableStart="@drawable/checklist"
+                            android:drawablePadding="8dp"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:background="?attr/selectableItemBackground" />
+
+                        <!-- Hidden Answer (Initially GONE) -->
+                        <TextView
+                            android:id="@+id/answer_add_checklist"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="To add a checklist, open a card and select 'Checklist' from the card's menu."
+                            android:textSize="14sp"
+                            android:padding="8dp"
+                            android:visibility="visible" />
+                    </LinearLayout>
+
+                    <!-- Additional FAQs can follow the same structure -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="8dp"
+                        android:gravity="center_vertical">
+
+                        <!-- Icon -->
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_notification"
+                            android:contentDescription="Notification Icon"
+                            android:layout_marginEnd="8dp" />
+
+                        <!-- Text (Minimum height set to 48dp to meet touch target size) -->
+                        <TextView
+                            android:id="@+id/question_due_date"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:minHeight="48dp"
+                            android:padding="8dp"
+                            android:text="Receive a notification for due date"
+                            android:textSize="16sp"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:background="?attr/selectableItemBackground" />
+                    </LinearLayout>
+
+                    <!-- Hidden Answer (Initially GONE) -->
+                    <TextView
+                        android:id="@+id/answer_due_date"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="To receive notifications for due dates, use local notifications or FCM to alert the user when the due date approaches."
+                        android:textSize="14sp"
+                        android:padding="8dp"
+                        android:visibility="visible" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="8dp"
+                        android:gravity="center_vertical">
+
+                        <!-- Icon -->
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_delete"
+                            android:contentDescription="Delete Icon"
+                            android:layout_marginEnd="8dp" />
+
+                        <!-- Text -->
+                        <TextView
+                            android:id="@+id/question_delete_board"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:minHeight="48dp"
+                            android:padding="8dp"
+                            android:text="Delete a board"
+                            android:textSize="16sp"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:background="?attr/selectableItemBackground" />
+                    </LinearLayout>
+
+                    <!-- Hidden Answer -->
+                    <TextView
+                        android:id="@+id/answer_delete_board"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="To delete a board, confirm the action and remove the board from the database, as well as any associated files from storage."
+                        android:textSize="14sp"
+                        android:padding="8dp"
+                        android:visibility="visible" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="8dp"
+                        android:gravity="center_vertical">
+
+                        <!-- Icon -->
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_user"
+                            android:contentDescription="Account Icon"
+                            android:layout_marginEnd="8dp" />
+
+                        <!-- Text -->
+                        <TextView
+                            android:id="@+id/question_change_account_info"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:minHeight="48dp"
+                            android:padding="8dp"
+                            android:text="Change account information"
+                            android:textSize="16sp"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:background="?attr/selectableItemBackground" />
+                    </LinearLayout>
+
+                    <!-- Hidden Answer -->
+                    <TextView
+                        android:id="@+id/answer_change_account_info"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="To change account information, navigate to your profile settings and update your email, password, or other details."
+                        android:textSize="14sp"
+                        android:padding="8dp"
+                        android:visibility="visible" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="8dp"
+                        android:gravity="center_vertical">
+
+                        <!-- Icon -->
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/cards"
+                            android:contentDescription="Cards Icon"
+                            android:layout_marginEnd="8dp" />
+
+                        <!-- Text -->
+                        <TextView
+                            android:id="@+id/question_view_cards"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:minHeight="48dp"
+                            android:padding="8dp"
+                            android:text="View your cards in My Cards page and widget"
+                            android:textSize="16sp"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:background="?attr/selectableItemBackground" />
+                    </LinearLayout>
+
+                    <!-- Hidden Answer -->
+                    <TextView
+                        android:id="@+id/answer_view_cards"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="To view your cards, go to the 'My Cards' page. Use RecyclerView or LazyColumn for displaying cards dynamically."
+                        android:textSize="14sp"
+                        android:padding="8dp"
+                        android:visibility="visible" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="8dp"
+                        android:gravity="center_vertical">
+
+                        <!-- Icon -->
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/boards"
+                            android:contentDescription="Add Board Icon"
+                            android:layout_marginEnd="8dp" />
+
+                        <!-- Text -->
+                        <TextView
+                            android:id="@+id/question_add_board"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:minHeight="48dp"
+                            android:padding="8dp"
+                            android:text="Add a board"
+                            android:textSize="16sp"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:background="?attr/selectableItemBackground" />
+                    </LinearLayout>
+
+                    <!-- Hidden Answer -->
+                    <TextView
+                        android:id="@+id/answer_add_board"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="To add a new board, fill in the board name and description, then save it to your database."
+                        android:textSize="14sp"
+                        android:padding="8dp"
+                        android:visibility="visible" />
+
+                </LinearLayout>
+            </ScrollView>
+
+            <!-- Second vertical scrollable section (Feedback) -->
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@color/divider_color">
+
+                    <!-- Feedback Section Title -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="🙈🙉🙊Feedback"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:paddingBottom="8dp"
+                        android:background="@color/task_list_action_color"/>
+
+                    <!-- Feedback items -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Support Questions"
+                        android:textSize="16sp"
+                        android:padding="8dp"
+                        android:drawableStart="@drawable/ic_support"
+                        android:drawablePadding="8dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Bug Reports"
+                        android:textSize="16sp"
+                        android:padding="8dp"
+                        android:drawableStart="@drawable/ic_bug_report"
+                        android:drawablePadding="8dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Feature Requests"
+                        android:textSize="16sp"
+                        android:padding="8dp"
+                        android:drawableStart="@drawable/ic_feature_request"
+                        android:drawablePadding="8dp" />
+                </LinearLayout>
+            </ScrollView>
+
+        </LinearLayout>
+        </ScrollView>
+    </HorizontalScrollView>
+</RelativeLayout>

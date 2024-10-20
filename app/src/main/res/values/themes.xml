@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Your custom theme extending from AppCompat -->
+    <style name="Theme.PinnacleMove" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here -->
+    </style>
+
+    <!-- Ensure AppTheme extends from an AppCompat theme -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar" />
+</resources>
