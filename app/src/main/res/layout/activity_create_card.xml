@@ -1,0 +1,113 @@
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/img"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Assign To"
+        android:padding="8dp" />
+
+    <RadioGroup
+        android:id="@+id/userSelectionGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/selectUserRadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select User"
+            android:minHeight="48dp" />
+
+        <RadioButton
+            android:id="@+id/enterNewUserRadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enter New Username"
+            android:minHeight="48dp" />
+    </RadioGroup>
+
+    <Spinner
+        android:id="@+id/userSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+
+    <EditText
+        android:id="@+id/newUserEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Or enter new username"
+        android:inputType="text"
+        android:visibility="gone" />
+
+    <EditText
+        android:id="@+id/cardTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Card Title"
+        android:inputType="text"
+        android:minHeight="48dp" />
+
+    <EditText
+        android:id="@+id/createdBy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Created By"
+        android:inputType="text"
+        android:minHeight="48dp" />
+
+    <TextView
+        android:id="@+id/dueDateTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Due Date"
+        android:padding="8dp" />
+
+    <Button
+        android:id="@+id/pickDueDateButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Pick Due Date" />
+
+    <Button
+        android:id="@+id/pickTimeButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Pick Time" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select Background Color"
+        android:padding="8dp" />
+
+    <Spinner
+        android:id="@+id/colorSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"/>
+
+    <Button
+        android:id="@+id/createCardButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Create Card" />
+
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+</LinearLayout>
+</ScrollView>
