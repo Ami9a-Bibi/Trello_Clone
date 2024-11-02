@@ -71,6 +71,11 @@ class MyWorkSpaceActivity : AppCompatActivity() {
         }
     }
 
+    // Navigate to Browse template
+    fun navigateToScreen1(view: View) {
+        val intent = Intent(this, TemplateSelectionActivity::class.java)
+        startActivity(intent)
+    }
     // Navigate to CreateCardActivity
     fun navigateToScreen2(view: View) {
         val intent = Intent(this, CreateCardActivity::class.java)
