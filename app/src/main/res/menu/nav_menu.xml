@@ -1,0 +1,38 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_boards"
+        android:title="Boards"
+        android:icon="@drawable/boards" />
+
+
+        <item
+            android:id="@+id/nav_workspaces"
+            android:title="Amina Bibi's Workspace"
+            android:icon="@drawable/workspace" />
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_my_cards"
+            android:title="My cards"
+            android:icon="@drawable/cards" />
+        <item
+            android:id="@+id/nav_offline_boards"
+            android:title="Offline boards"
+            android:icon="@drawable/offlineboard" />
+
+    <item
+        android:id="@+id/nav_settings"
+        android:title="Settings"
+        android:icon="@drawable/setting" />
+
+    <item
+        android:id="@+id/nav_help"
+        android:title="Help!"
+        android:icon="@drawable/help" />
+        <item
+            android:id="@+id/nav_logout"
+            android:title="Logout"
+            android:icon="@drawable/ic_logout" />
+
+    </group>
+</menu>

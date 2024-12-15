@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".TemplateSelectionActivity">
+
+    <!-- Toolbar -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:titleTextColor="@android:color/white"
+        android:elevation="4dp"/>
+
+    <!-- Chips for category selection -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:background="@android:color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipAll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="All"
+                android:checked="true"
+                android:minHeight="48dp"
+                android:minWidth="48dp"/>
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipBusiness"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Business"
+                android:minHeight="48dp"
+                android:minWidth="48dp"/>
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipDesign"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Design"
+                android:minHeight="48dp"
+                android:minWidth="48dp"/>
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipEducation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Education"
+                android:minHeight="48dp"
+                android:minWidth="48dp"/>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- RecyclerView for displaying templates -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewTemplates"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"/>
+</LinearLayout>

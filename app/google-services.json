@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "936621406929",
+    "project_id": "fooddelivery-986e9",
+    "storage_bucket": "fooddelivery-986e9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:936621406929:android:135599e8f568e8bafea3f0",
+        "android_client_info": {
+          "package_name": "com.example.pinnaclemove"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBu0nTQnqQQbwykYbbBpNEZu_k64syAEKQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

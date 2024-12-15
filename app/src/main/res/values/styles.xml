@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Style for circular image view using ShapeableImageView -->
+    <style name="CircularImageViewStyle" parent="">
+        <!-- Apply rounded corners -->
+        <item name="cornerFamily">rounded</item>
+        <!-- Set corner size to 50% for full circle -->
+        <item name="cornerSize">50%</item>
+    </style>
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Add your customizations here -->
+    </style>
+</resources>

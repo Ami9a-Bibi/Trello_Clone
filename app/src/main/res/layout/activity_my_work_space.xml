@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Toolbar for the top bar -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        app:titleTextColor="@android:color/white" />
+
+    <!-- TabLayout for switching between Boards and Highlights -->
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:layout_marginTop="57dp"
+        android:background="@color/colorPrimary"
+        app:tabIndicatorColor="@android:color/white"
+        app:tabTextColor="@android:color/white"
+        app:tabSelectedTextColor="@android:color/white"
+        android:contentDescription="Tab layout for switching between Boards and Highlights" />
+
+    <!-- ViewPager2 for holding the fragments -->
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="bottom"
+        android:layout_marginTop="95dp" />
+
+    <!-- Shortcuts (4 buttons) -->
+    <LinearLayout
+        android:id="@+id/shortcut_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="end|bottom"
+        android:layout_margin="16dp"
+        android:visibility="gone">
+
+        <!-- Shortcut 1 -->
+        <Button
+            android:id="@+id/shortcut1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Browse Templates"
+            android:onClick="navigateToScreen1" />
+
+        <!-- Shortcut 2 -->
+        <Button
+            android:id="@+id/shortcut2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Card"
+            android:onClick="navigateToScreen2" />
+
+        <!-- Shortcut 3 -->
+        <Button
+            android:id="@+id/shortcut3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Board"
+            android:onClick="navigateToScreen3" />
+
+        <!-- Close button to hide the shortcuts -->
+        <Button
+            android:id="@+id/close_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="✖"
+        android:onClick="closeShortcuts" />
+
+    </LinearLayout>
+
+    <!-- Floating Action Button at the bottom right -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:layout_margin="16dp"
+        android:src="@drawable/ic_add_member"
+        android:backgroundTint="@color/task_list_action_color"
+        android:contentDescription="Add new member" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,13 @@
+Trello_Clone
+Project Overview Trello Clone is an open-source project aimed at replicating the core features of Trello, a popular project management tool owned by Atlassian. This clone provides users with the ability to create Trello profiles, manage tasks, collaborate on boards, and share profiles with others. The app includes essential features to help users organize their projects across multiple boards for purposes like education or business.
+
+Key Features: Splash Screen with App Icon: Displays the custom app launcher icon on the splash screen. Sign-In and Sign-Up Screens: Allows users to register or log in to their Trello profile. Home Screen: Users can create and manage Trello profiles and share them with others. Setup Instructions Requirements: Platform: Android Studio Languages/Frameworks: Kotlin, Jetpack Compose (and/or XML) Tools: Git, Android SDK Installation Steps: Clone the Repository: Copy code git clone https://github.com/Ami9a-Bibi/Trello_Clone.git Open the Project in Android Studio: Launch Android Studio and select "Open an Existing Project." Navigate to the folder where the project is cloned and open it. Build the Project: Ensure all dependencies are installed. Sync the project with Gradle files. Run the App: Connect an Android device or use an emulator to run the app. Click on "Run" or use the command: Copy code ./gradlew assembleDebug
+
+Screens Designed and Their Purpose:
+Help & Setting Screen: To give assistance to make app  work according to your taste
+Card Create: Screen for creating card it's detailed page in which user can choose from 1 of 7 colors for its card background.
+WorkSpace Page: It has Tab layout user can switch between Highlights & Boards
+Technical Challenges Faced Color Scheme Selection: One of the initial challenges was selecting a consistent and visually appealing color palette that aligns with the app’s theme while maintaining a good user experience across various screens. Home Page Alignment: Achieving the desired layout and alignment on the Home screen proved difficult, especially when handling different screen sizes and orientations.
+
+ Added functionality to create and manage boards, lists, and tasks, allowing users to track project progress more efficiently. Collaboration Features: Implement features for sharing boards, assigning tasks, and commenting, enabling seamless collaboration among users. Improved User Experience: Focus on improving the app's performance and responsiveness, including optimizing the UI for different screen resolutions.
+Authentication and Security: Enhance user authentication mechanisms and ensure secure data handling for user accounts and profiles.
